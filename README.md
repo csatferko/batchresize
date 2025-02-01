@@ -15,10 +15,10 @@ No installation is needed. Python3 environment is a prerequisite. PIL (pillow) m
 	2. Choose an input method.
 	3. Provide new size.
 ## Test
-Tested on Linux Lite 7.2. and Windows 10.
+Tested on Linux Lite 7.2 and Windows 10.
 ## Credits
 Ferenc Csatári\
-fcsatari@gmail,com
+fcsatari@gmail.com
 ## License
 GPL
 
