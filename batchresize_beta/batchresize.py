@@ -1,4 +1,4 @@
-#! usr/bin python3
+#! /usr/bin python3
 # batchresize 1.0
 
 import os, sys, time, datetime
