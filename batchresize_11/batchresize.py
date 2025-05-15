@@ -24,7 +24,7 @@ print()
 while True:
     time.sleep(0.5)
     print('Provide the name of the source folder.')
-    srcFold = input()
+    srcFold = input('> ')
     srcPath = cwDir / Path(str(srcFold))
     if os.path.exists(srcPath) is True:
         break
@@ -44,13 +44,13 @@ listDir.sort()
 
 while True:
     time.sleep(0.5)
-    print('\nHow do you want to enter the new size? By percentage of the new edges [p] or number of pixels for the new width [n]?')
-    choiceMode = input()
+    print('\nHow do you want to enter the new size? By percentage of the new edges [p] or number of pixels for the new longer edge [n]?')
+    choiceMode = input('> ')
     if choiceMode == "p" or choiceMode == "P":
         while True:
             time.sleep(0.5)
             print('\nEnter the new edge size as a percentage of the original. Give an integer.')
-            newSize = input()
+            newSize = input('> ')
             try:
                 val = int(newSize)
                 if val < 0 or val > 1000:
@@ -64,8 +64,8 @@ while True:
     elif choiceMode == "n" or choiceMode == "N":
         while True:
             time.sleep(0.5)
-            print('\nEnter the new width as the number of pixels. Give an integer.')
-            newSize = input()
+            print('\nEnter the new longer edge as the number of pixels. Give an integer.')
+            newSize = input('> ')
             try:
                 val = int(newSize)
                 if val < 0 or val > 100000:
@@ -98,8 +98,12 @@ for fileName in listDir:
             newWidth = width * (int(newSize) / 100)
             newHeight = height * (int(newSize) / 100)
         else:
-            newWidth = int(newSize)
-            newHeight = (height / width) * int(newSize)
+            if height > width:
+                newHeight = int(newSize)
+                newWidth = (width / height) * int(newSize)
+            else:
+                newWidth = int(newSize)
+                newHeight = (height / width) * int(newSize)            
         resImage = image.resize((int(newWidth), int(newHeight)))
         resImage.save(f"{destFolder}/{fileName}")
     else:

@@ -1,7 +1,7 @@
 # batchresize
 ## Version
-1.0\
-January 2025
+1.1\
+May 2025
 ## Description
 The batchresize tool resizes all of the image files in a given folder and saves them in a separate one. The original files remain intact.
 You can enter the new size either as percentage or as the count of pixels.
