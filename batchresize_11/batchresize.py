@@ -1,5 +1,5 @@
-#! /usr/bin python3
-# batchresize 1.0
+#!/usr/bin/env python3
+# batchresize 1.1
 
 import os, sys, time, datetime
 from pathlib import Path
@@ -9,7 +9,7 @@ cwDir = os.path.dirname(os.path.abspath(sys.argv[0]))
 timeStamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 #logName = 'batchresize_log_' + str(timeStamp) + '.txt'
 
-print('\nbatchresize 1.0\n')
+print('\nbatchresize 1.1\n')
 print('The batchresize tool resizes all of the image files in a given folder and saves them in a separate one. The original files remain intact.')
 print('You can enter the new size either as percentage or as pixel number.')
 print('The source folder must be one level below the script (current working directory). \n')
