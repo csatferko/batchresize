@@ -1,10 +1,11 @@
 # batchresize
 ## Version
-1.1\
-May 2025
+1.2\
+August 2025
 ## Description
 The batchresize tool resizes all of the image files in a given folder and saves them in a separate one. The original files remain intact.
 You can enter the new size either as percentage or as the count of pixels.
+You can choose a filter for resampling.
 ## Prerequisites and Installation
 No installation is needed. Python3 environment is a prerequisite. PIL (pillow) module has to be installed.
 ## How to Use
@@ -14,6 +15,7 @@ No installation is needed. Python3 environment is a prerequisite. PIL (pillow) m
 	1. Give the folder name.
 	2. Choose an input method.
 	3. Provide new size.
+	4. Choose a filter or run with default.
 ## Test
 Tested on Linux Lite 7.2 and Windows 10.
 ## Credits
